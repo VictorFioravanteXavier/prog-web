@@ -13,7 +13,7 @@
     </div>
     <div>
       <label for="cpf">CPF:</label>
-      <input type="text" name="cpf" id="cpf" required>
+      <input type="text" name="cpf" id="cpf" minlength="11" required>
     </div>
     <div>
       <label for="nasc">Data de nasciemento:</label>
@@ -31,13 +31,16 @@
       <label for="curso">Nome do curso:</label>
       <input type="text" name="curso" id="curso" required>
     </div>
-    <div>
-      <label for="modalidade">Modalidade:</label>
-      <input type="radio" name="individual" id="individual" value="individual" required checked>
-      <label for="individual">Individual</label>
-      <input type="radio" name="coletiva" id="coletiva" value="coletiva" required>
-      <label for="coletiva">Coletiva</label>
-    </div>
+    <fieldset>
+      <legend>Modalidade:</legend>
+      <div>
+        <input type="radio" name="modalidade" id="individual" value="individual" checked>
+        <label for="individual">Individual</label>
+
+        <input type="radio" name="modalidade" id="coletiva" value="coletiva">
+        <label for="coletiva">Coletiva</label>
+      </div>
+    </fieldset>
     <div>
       <input type="checkbox" name="ajudaCusto" id="ajudaCusto">
       <label for="ajudaCusto">Ajuda de Custo</label>
