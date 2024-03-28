@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario 4</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container">
+    <form action="#">
+      <div>
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name">
+      </div>
+      <div>
+        <label for="login">Login:</label>
+        <input type="text" name="login" id="login">
+      </div>
+      <div>
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha">
+      </div>
+      <div>
+        <label for="nasc">Data de nasciemento:</label>
+        <input type="date" name="nasc" id="nasc">
+      </div>
+      <div>
+        <label for="status">Status:</label>
+        <select name="status" id="status" value="Ativo">
+          <option value="Ativo">Ativo</option>
+          <option value="Inativo">Inativo</option>
+        </select>
+      </div>
+      <fieldset>
+        <legend>Tipo</legend>
+        <input type="radio" name="Tipo" id="estudante">
+        <label for="estudante">Estudante</label>
+        <input type="radio" name="Tipo" id="professor">
+        <label for="professor">Professor</label>
+        <input type="radio" name="Tipo" id="tecnicoAdiministrativo">
+        <label for="tecnicoAdiministrativo">Técnico-Adiministrativo</label>
+      </fieldset>
+      <div>
+        <label for="observacoes" style="display: block;">Observações</label>
+        <textarea name="observacoes" id="observacoes" cols="50" rows="10"></textarea>
+      </div>
+      <fieldset>
+        <legend for="">Módulos</legend>
+        <input type="radio" name="modulos" id="ensino">
+        <label for="ensino">Ensino</label>
+        <input type="radio" name="modulos" id="pesquisa">
+        <label for="pesquisa">Pesquisa</label>
+        <input type="radio" name="modulos" id="extencao">
+        <label for="extencao">Extenção</label>
+      </fieldset>
+      <div class="botoes">
+        <button type="submit">Cadastrar</button>
+        <button type="reset">Limpar</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

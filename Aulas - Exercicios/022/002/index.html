@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario 2</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container">
+    <form action="#">
+      <div>
+        <label for="nomeProduto">Nome do Produto</label>
+        <input type="text" name="nomeProduto" id="nomeProduto" required>
+      </div>
+      <div>
+        <label for="descrição" style="display: block;">Descrição</label>
+        <textarea name="descrição" id="descrição" cols="50" rows="10" required></textarea>
+      </div>
+      <div>
+        <label for="dataCompra">Data de Compra</label>
+        <input type="date" required id="nasc">
+      </div>
+      <div>
+        <label for="quantidade">Quantidade</label>
+        <input type="number" id="quantidade" max="50" min="5" style="width: 40px;" required>
+      </div>
+      <div class="botoes">
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
