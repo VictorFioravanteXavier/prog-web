@@ -147,6 +147,10 @@ nav .classificacao ul {
     padding-top: 20px;
 }
 
+.selecionado{
+    background-color: #af9500!important;
+}
+
 nav li{
     background-color: #FFD700;
     padding: 7px;
@@ -160,6 +164,7 @@ nav li{
         background-color: #927c00;
     }
 }
+
 
 nav a{
     font-weight: bold;
