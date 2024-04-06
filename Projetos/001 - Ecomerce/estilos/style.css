@@ -195,9 +195,9 @@ main .itens_venda ul{
     list-style-type: none;
     display: grid;
     /* aqui eu determino é são 7 colunas de tamanhos iguas, cada coluna tem uma fração */
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     /* espaço entre um elemento interno e outro */
-    grid-gap: 75px 100px;
+    grid-gap: 75px 50px;
     /* margem interna que afasta os elementos da borda do grid */
     padding-top: 20px;
 }
