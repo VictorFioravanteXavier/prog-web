@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar</title>
+    <link rel="stylesheet" href="../../estilos/entrar e cadastrar/style.css">
+</head>
+<body>
+    <div>
+        <p><a href="../index.html" class="voltar"></a></p>
+    </div>
+    <div class="container">
+        <div class="titulo">
+            <img src="../../imagens/usuario_icon_black.png" alt="imagem de um icone de usuário">
+            <input type="checkbox" class="toggle" id="login-signup">  
+            <label for="login-signup" class="custom-label"></label>
+        </div>
+        <div class="form-container">
+            <div class="front">
+                <form action="#">
+                    <div class="inp">
+                        <label for="login-username"><img src="../../imagens/usuario_icon_black.png" alt=""></label>
+                        <input type="text" name="username" id="login-username" placeholder="Username" autocomplete="username">
+                    </div>
+                    <div class="inp">
+                        <label for="login-senha"><img src="../../imagens/cadeado_icon.png" alt=""></label>
+                        <input type="password" name="senha" id="login-senha" placeholder="Senha" autocomplete="current-password">
+                    </div>
+                    <div class="esp">
+                        <div class="lembrar-me">
+                            <input type="checkbox" name="lembrar" id="lembrar">
+                            <label for="lembrar">Lembrar-me</label>
+                        </div>
+                        <p class="esqueci"><a href="">Esqueci minha senha</a></p>
+                    </div>
+                    <div class="finalizar">
+                        <button type="submit" class="logar">Logar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="back" style="display: none;">
+                <form action="#">
+                    <div class="inp">
+                        <label for="signup-username"><img src="../../imagens/usuario_icon_black.png" alt=""></label>
+                        <input type="text" name="username" id="signup-username" placeholder="Username" autocomplete="username">
+                    </div>
+                    <div class="inp">
+                        <label for="signup-login"><img src="../../imagens/usuario_icon_black.png" alt=""></label>
+                        <input type="text" name="login" id="signup-login" placeholder="Login" autocomplete="username">
+                    </div>
+                    <div class="inp">
+                        <label for="signup-email"><img src="../../imagens/icon_email.png" alt=""></label>
+                        <input type="email" name="email" id="signup-email" placeholder="E-mail" autocomplete="email">
+                    </div>
+                    <div class="inp">
+                        <label for="signup-cpf"><img src="../../imagens/icon_cpf.png" alt=""></label>
+                        <input type="text" name="cpf" id="signup-cpf" placeholder="CPF" autocomplete="off">
+                    </div>
+                    <div class="inp">
+                        <label for="signup-senha"><img src="../../imagens/cadeado_icon.png" alt=""></label>
+                        <input type="password" name="senha" id="signup-senha" placeholder="Senha" autocomplete="new-password">
+                    </div>
+                    <div class="finalizar">
+                        <button type="submit" class="cadastrar">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-signup').addEventListener('change', function() {
+            const isChecked = this.checked;
+            document.querySelector('.front').style.display = isChecked ? 'none' : 'block';
+            document.querySelector('.back').style.display = isChecked ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>

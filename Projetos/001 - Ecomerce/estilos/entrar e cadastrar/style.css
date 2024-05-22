@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&family=Lexend+Exa:wght@100..900&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    pointer-events: none;   
+}
+
+body {
+    background: linear-gradient(180deg, rgba(0,35,102,1), rgb(232, 0, 0));
+    background-color: rgb(232, 0, 0); /* Cor fixa após o gradiente */
+    height: 100vh;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 600px;
+    align-items: center;
+}
+
+.titulo {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.titulo img {
+    margin: auto;
+    width: 250px; 
+}
+
+.titulo input[type=checkbox] {
+    display: none; /* Esconde o checkbox padrão */
+}
+
+.titulo .custom-label {
+    color: #fff;
+    font-size: 40px;
+    font-family: "Lexend Exa", sans-serif;
+    font-style: normal;
+    position: relative;
+    cursor: pointer;
+}
+
+.titulo .custom-label::before {
+    content: 'Login';
+    text-decoration: underline;
+    margin-right: 30px;
+}
+
+.titulo .custom-label::after {
+    content: 'Sign up';
+}
+
+.titulo input[type=checkbox]:checked + .custom-label::before {
+    text-decoration: none;
+}
+
+.titulo input[type=checkbox]:checked + .custom-label::after {
+    text-decoration: underline;
+}
+
+/* Contêiner dos formulários para posicionamento */
+.form-container {
+    position: relative;
+}
+
+.front, .back {
+    width: 100%;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Estilos para os campos de entrada */
+form .inp {
+    background-color: white;
+    padding-left: 5px;
+    padding-top: 2px;
+    border: 1px solid;
+    border-radius: 10px;
+    max-width: 1150px;
+    width: 60%;
+    height: 30px;
+    margin: 0 auto 20px auto;
+}
+
+form .inp input {
+    width: calc(100% - 35px);
+    height: calc(100% - 2.5px);
+    border: 0;
+    outline: none;
+    font-size: 20px;
+}
+
+label img {
+    width: 20px;
+    margin-right: 5px;
+    transform: translateY(4px);
+}
+
+div .esp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+form .lembrar-me {
+    margin-right: 55px;
+}
+
+.lembrar-me label {
+    cursor: pointer;
+}
+
+.lembrar-me label:hover {
+    text-decoration: underline;
+}
+
+.lembrar-me input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+    appearance: none;  /* Remove a aparência padrão */
+    -webkit-appearance: none;
+}
+
+.lembrar-me input[type=checkbox]:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background: url(../../imagens/no_check_icon.png);
+    transform: translate(-20px, -15px);
+}
+
+.lembrar-me input[type=checkbox]:checked:before {
+    background: url(../../imagens/check_icon.png);
+}
+
+.esqueci a {
+    text-decoration: none;
+    color: black;
+}
+
+.esqueci a:hover {
+    text-decoration: underline;
+}
+
+.finalizar {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logar, .cadastrar {
+    text-align: center;
+    height: 45px;
+    width: 200px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: 0;
+    cursor: pointer;
+    background-color: white;
+}
+
+.logar:hover, .cadastrar:hover {
+    background-color: #cacaca;
+}
+
+
+.voltar {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    position: absolute; /* Mudei para absolute */
+    top: 0; /* Posiciona no topo do contêiner pai */
+    left: 0; /* Posiciona na direita do contêiner pai */
+    align-self: flex-start; /* Pode ser removido, pois não é necessário com position: absolute */
+}
+
+.voltar:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\274c"; /* Mantém o hex value */
+    font-size: 50px; 
+    color: #FFF;
+    line-height: 100px;
+    text-align: center;
+}

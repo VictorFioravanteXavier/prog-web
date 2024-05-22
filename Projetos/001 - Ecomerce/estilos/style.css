@@ -9,10 +9,11 @@ img{
 }
 
 body {
-    background: linear-gradient(180deg, rgba(0,35,102,1) 8%, rgb(239, 57, 93) 35%);
-    background-color: rgba(239,58,93,1); /* Cor fixa após o gradiente */
+    background: linear-gradient(180deg, rgba(0,35,102,1) 8%, rgb(232, 0, 0) 35%);
+    background-color: rgb(232, 0, 0); /* Cor fixa após o gradiente */
     height: 100vh;
     background-repeat: no-repeat;
+    width: 100%;
 }
 
 /* HEADER */
@@ -200,7 +201,7 @@ main .itens_venda ul{
 }
 
 main .itens_venda ul li{
-    background-color: gray;
+    background-color: #FFFFFF;
     padding: 7px;
     border-radius: 20px;
     border: 1px solid;
@@ -228,7 +229,7 @@ main .itens_venda ul li div #imagem_produto{
     margin-top: 2.5px;
     width: 95%;
     height: 70%;
-    border: 1px solid;
+
 }
 
 main p{

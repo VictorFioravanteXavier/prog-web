@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Toggle</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hidden {
+        display: none;
+        }
+
+        #toggleCheckbox:checked ~ #element1 {
+        display: block;
+        }
+
+        #toggleCheckbox:checked ~ #element2 {
+        display: none;
+        }
+    </style>
+</head>
+<body>
+    <label for="toggleCheckbox">Mostrar/Esconder Elementos</label>
+    <input type="checkbox" id="toggleCheckbox">
+
+    <div id="element1" class="hidden">
+        Elemento 1 - Este aparece quando o checkbox está marcado.
+    </div>
+    <div id="element2">
+        Elemento 2 - Este some quando o checkbox está marcado.
+    </div>
+</body>
+</html>
