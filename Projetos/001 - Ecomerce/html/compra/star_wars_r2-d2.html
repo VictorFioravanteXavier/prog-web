@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../estilos/compra/style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="../../imagens/Logo.png" alt="Logo do ecomerce" id="logo">
+        </div>
+        <div class="search-bar">
+            <form action="#">
+                <label for="search" id="lupa"><img src="../../imagens/lupa_icon.png" id="lupa_icon"></label>
+                <input type="text" name="search" id="search" placeholder="Faça uma pesquisa">
+            </form>
+        </div>
+        <div id="icones">
+            <ul>
+                <li><a href="#"><img src="../../imagens/coracao_icon.png" id="coracao"></a></li>
+                <li><a href="#"><img src="../../imagens/carrinho_icon.png" id="carrinho"></a></li>
+                <li><a href="#"><img src="../../imagens/usuario_icon.png" id="usuario"></a></li>
+            </ul>
+        </div>
+        <div id="entrar">
+            <h2><a href="../entrar e cadastrar/entrar.html">Entrar</a></h2>
+        </div>
+    </header>   
+    <hr>
+    <nav>
+        <div class="classificacao">
+            <ul>
+                <a href="../index.html">
+                    <li>Todos</li>
+                </a>
+                <a href="../navbar/star_wars.html">
+                    <li>Star Wars</li>
+                </a>
+                <a href="../navbar/super_heroes.html">
+                    <li>Super Heroes</li>
+                </a>
+                <a href="../navbar/arcade.html">
+                    <li>Arcade</li>
+                </a>
+                <a href="../navbar/ninjago.html">
+                    <li>Ninjago</li>
+                </a>
+                <a href="../navbar/harry_potter.html">
+                    <li>Harry Potter</li>
+                </a>
+                <a href="../navbar/veiculos.html">
+                    <li>Veículos</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="imagem">
+                <img src="../../imagens/LEGO Star Wars R2-D2.png" alt="imagem do produto">
+            </div>
+            <div class="sobre-produto">
+                <h1>Star Wars R2-D2</h1>
+                <div class="descricao">
+                    <p> 
+                        O modelo R2-D2 LEGO® é incrível! Com 1.050 peças, oferece uma construção detalhada e autêntica, incluindo perna central retrátil, cabeça rotativa, escotilhas extensíveis e um sabre de luz escondido. Acompanha um expositor com placa de informações, uma miniatura R2-D2 e um bloco comemorativo dos 50 anos da Lucasfilm.
+                        <br><br>
+                        Medindo 31 cm de altura, 20 cm de largura e 15 cm de profundidade, é uma peça central impressionante. Por R$219,50 à vista, ou em 12x de R$19,00, é um ótimo investimento para fãs de Star Wars™ e LEGO®. A entrega é rápida e o frete custa apenas R$15,00. Uma compra essencial para qualquer colecionador!
+                    </p>
+                </div>
+            </div>
+            <div class="separacao"></div>
+            <div class="informacoes">
+                <div class="preco">
+                    <h2><span class="cor-preco">R$219,50</span> à vista</h2>
+                    <h3>12x de <span class="cor-preco">R$19,00</span> no cartão com juros</h3>
+                </div>
+                <div class="entrega">
+                    <h2 class="prazo-entrega"><img src="../../imagens/caminhao_icon.png" alt=""> Prazo de Entrega</h2>
+                    <h3>Chega em 2 (dois) dias úteis</h3>
+                </div>
+                <div class="formas-pagamento">
+                    <h2>Formas de Pagamento</h2>
+                    <img src="../../imagens/formas-pagamento-img.png" alt="">
+                </div>
+                <div class="quantidade">
+                    <button class="subitrair">
+                        <svg class="plus-sign" viewBox="0 0 24 24">
+                            <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </button>
+                    <div class="num-quantidade">0</div>
+                    <button class="adicionar"> 
+                        <svg class="plus-sign" viewBox="0 0 24 24">
+                            <line x1="12" y1="5" x2="12" y2="19" stroke="black" stroke-width="2"/>
+                            <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+                <button class="btn">Adicionar no Carrinho</button>
+                <button class="btn">Comprar Agora</button>
+            </div>
+        </div>
+            <div class="comentarios">
+                <div class="comentarios-main">
+                    <h1>Comente:</h1>
+                    <div class="avaliacao_user">
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars"></label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"></label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"></label>
+                            <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"></label>
+                            <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"></label>
+                        </div>
+                        <form action="">
+                            <textarea name="avaliacao" id="avaliacao" cols="30" rows="5" placeholder="Avaliem-nos"></textarea>
+                            <button class="btn">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="separacao"></div>
+                <div class="avaliacoes">
+                    <div class="avaliacao">
+                        <div class="name-stars">
+                            <p class="name">Tomás Turbando</p>
+                            <ul>
+                                <li class="star-check"></li>
+                                <li class="star-check"></li>
+                                <li class="star-check"></li>
+                                <li class="star-check"></li>
+                                <li class="star"></li>
+                            </ul> 
+                        </div>
+                        <div class="coment">
+                            <p>Muito satisfeito com este LEGO Star Wars R2-D2. A qualidade das peças é excelente e o design é fiel ao personagem original. A única razão para não dar 5 estrelas é o preço, que achei um pouco alto. No entanto, pela diversão e o resultado final, é um ótimo investimento para qualquer fã de Star Wars.</p>
+                        </div>
+                    </div>
+                    <div class="separacao-horizontal"></div>
+                    <div class="avaliacao">
+                        <div class="name-stars">
+                            <p class="name">Elsa Pimenta</p>
+                            <ul>
+                                <li class="star-check"></li>
+                                <li class="star-check"></li>
+                                <li class="star-check"></li>
+                                <li class="star-check"></li>
+                                <li class="star"></li>
+                            </ul> 
+                        </div>
+                        <div class="coment">
+                            <p>Simplesmente espetacular! Este R2-D2 é um dos melhores conjuntos LEGO que já montei. O nível de detalhe é impressionante e o processo de construção é muito envolvente. Perfeito para colecionadores e fãs de Star Wars de todas as idades. Vale cada centavo!</p>
+                        </div>
+                    </div>
+                    <div class="separacao-horizontal"></div>
+                    <div class="avaliacao">
+                        <div class="name-stars">
+                            <p class="name">Dorinha Cavalo</p>
+                            <ul>
+                                <li class="star-check"></li>
+                                <li class="star-check"></li>
+                                <li class="star-check"></li>
+                                <li class="star"></li>
+                                <li class="star"></li>
+                            </ul> 
+                        </div>
+                        <div class="coment">
+                            <p>O LEGO Star Wars R2-D2 é bem detalhado e parece ótimo quando montado. Porém, achei que poderia ser um pouco mais robusto. Algumas peças são fáceis de se soltar, o que pode ser frustrante. No geral, é um bom kit, mas requer cuidado extra durante a montagem.</p>
+                        </div>
+                    </div>
+                    <div class="separacao-horizontal"></div>
+                    <div class="avaliacao">
+                        <div class="name-stars">
+                            <p class="name">Armando Pinto</p>
+                            <ul>
+                                <li class="star-check"></li>
+                                <li class="star-check"></li>
+                                <li class="star-check"></li>
+                                <li class="star-check"></li>
+                                <li class="star"></li>
+                            </ul> 
+                        </div>
+                        <div class="coment">
+                            <p>Adorei montar o R2-D2 da série Star Wars. As peças são de alta qualidade e o manual é bem claro. Só não dei 5 estrelas porque achei algumas partes um pouco complicadas para montar sozinho. No entanto, o produto final é maravilhoso e valeu cada minuto investido.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const numQuantidadeElement = document.querySelector('.num-quantidade');
+
+            const Adicionar = () => {
+                if (numQuantidadeElement.innerText !== '100'){
+                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) + 1;
+                }
+            };
+
+            const Subitrair = () => {
+                if (numQuantidadeElement.innerText !== "0"){
+                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) - 1;
+                }
+            }
+
+            document.querySelector('.adicionar').addEventListener('click', Adicionar);
+            document.querySelector('.subitrair').addEventListener('click', Subitrair)
+        });
+    </script>  
+</body>
+</html>

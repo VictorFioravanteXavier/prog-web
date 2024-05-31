@@ -1,33 +1,31 @@
+
+Seu código JavaScript contém alguns erros que precisam ser corrigidos. Aqui está a versão corrigida e explicada:
+
+document.getElementsByClassName retorna uma coleção de elementos, então é necessário acessar o primeiro elemento da coleção, se você estiver assumindo que há apenas um elemento com essa classe.
+innerText deve ser utilizado em um elemento individual, não em uma coleção de elementos.
+A função Adicionar precisa ser chamada de alguma forma, normalmente através de um evento como um clique.
+Aqui está a versão corrigida do seu código:
+
+html
+Copiar código
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkbox Toggle</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .hidden {
-        display: none;
-        }
-
-        #toggleCheckbox:checked ~ #element1 {
-        display: block;
-        }
-
-        #toggleCheckbox:checked ~ #element2 {
-        display: none;
-        }
-    </style>
+    <title>Incrementar Número</title>
 </head>
 <body>
-    <label for="toggleCheckbox">Mostrar/Esconder Elementos</label>
-    <input type="checkbox" id="toggleCheckbox">
+    <div class="num_quantidade">0</div>
+    <button onclick="Adicionar()">Adicionar</button>
 
-    <div id="element1" class="hidden">
-        Elemento 1 - Este aparece quando o checkbox está marcado.
-    </div>
-    <div id="element2">
-        Elemento 2 - Este some quando o checkbox está marcado.
-    </div>
+    <script>
+        const num_quantidade = document.getElementsByClassName('num_quantidade')[0];
+        num_quantidade.innerText = 0;
+
+        const Adicionar = () => {
+            num_quantidade.innerText = parseInt(num_quantidade.innerText) + 1;
+        }
+    </script>
 </body>
 </html>

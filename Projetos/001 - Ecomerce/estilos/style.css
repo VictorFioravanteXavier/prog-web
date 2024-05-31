@@ -177,26 +177,23 @@ nav a{
 
 main{
     margin-top: 50px;
-    width: 100%;
-    height: 120%;
+    width: auto;
+    height: auto;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 main .itens_venda{
     display: flex;
-    justify-content: center; /* Centraliza os itens horizontalmente */
+    justify-content: center;
     align-items: center;
-    padding: 0; /* Remove o espaçamento padrão da lista */
 }
 
 main .itens_venda ul{
     list-style-type: none;
     display: grid;
-    /* aqui eu determino é são 7 colunas de tamanhos iguas, cada coluna tem uma fração */
     grid-template-columns: repeat(5, 1fr);
-    /* espaço entre um elemento interno e outro */
     grid-gap: 50px 50px;
-    /* margem interna que afasta os elementos da borda do grid */
     padding-top: 20px;
 }
 
@@ -204,8 +201,8 @@ main .itens_venda ul li{
     background-color: #FFFFFF;
     padding: 7px;
     border-radius: 20px;
-    border: 1px solid;
-
+    box-shadow: 1px 1px 25px black;
+    
     -webkit-transition: -webkit-transform .5s ease;
     transition: transform .5s ease;
     &:hover{
