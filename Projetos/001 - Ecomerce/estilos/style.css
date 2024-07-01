@@ -9,8 +9,8 @@ img{
 }
 
 body {
-    background: linear-gradient(180deg, rgba(0,35,102,1) 8%, rgb(232, 0, 0) 35%);
-    background-color: rgb(232, 0, 0); /* Cor fixa após o gradiente */
+    background: linear-gradient(180deg, rgba(0,35,102,1) 10%, #000000 35%);
+    background-color: rgb(0, 0, 0); /* Cor fixa após o gradiente */
     height: 100vh;
     background-repeat: no-repeat;
     width: 100%;
@@ -87,6 +87,8 @@ header li{
 
 #coracao, #carrinho, #usuario{
     height: 50px;
+    width: 50px;
+    display: block;
 }
 
 #entrar{
@@ -222,11 +224,11 @@ main .itens_venda ul li div{
     height: 450px;
 }
 
-main .itens_venda ul li div #imagem_produto{ 
+main .itens_venda ul li div .imagem_produto{ 
     margin-top: 2.5px;
     width: 95%;
     height: 70%;
-
+    border-bottom: rgb(0, 0, 0) 2px solid;
 }
 
 main p{
@@ -240,13 +242,14 @@ main .peca_div{
     justify-content: center;
 }
 
-main #pecas{
+main .pecas{
     display: inline-block;
     margin: 0;
     transform: translatex(-10px);
+    font-size: 1.3em;
 }
 
-main #peca_icon{
+main .peca_icon{
     height: 60px;
     transform: translatex(-5px);
 }

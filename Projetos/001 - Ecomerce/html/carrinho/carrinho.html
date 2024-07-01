@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../estilos/carrinho/style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="../../imagens/Logo.png" alt="Logo do ecomerce" id="logo">
+        </div>
+        <div class="search-bar">
+            <form action="#">
+                <label for="search" id="lupa"><img src="../../imagens/lupa_icon.png" id="lupa_icon" alt=""></label>
+                <input type="text" name="search" id="search" placeholder="Faça uma pesquisa">
+            </form>
+        </div>
+        <div id="icones">
+            <ul>
+                <li><a href="#"><img src="../../imagens/coracao_icon.png" id="coracao" alt=""></a></li>
+                <li><a href="#"><img src="../../imagens/carrinho_icon.png" id="carrinho" alt=""></a></li>
+                <li><a href="#"><img src="../../imagens/usuario_icon.png" id="usuario" alt=""></a></li>
+            </ul>
+        </div>
+        <div id="entrar">
+            <h2><a href="../entrar-cadastrar/entrar.html">Entrar</a></h2>
+        </div>
+    </header> 
+    <hr>
+    <nav>
+        <div class="classificacao">
+            <ul>            
+                <li><a href="../index.html">Todos</a></li>
+                <li><a href="../navbar/star_wars.html">Star Wars</a></li>
+                <li><a href="../navbar/super_heroes.html">Super Heroes</a></li>
+                <li><a href="../navbar/arcade.html">Arcade</a></li>         
+                <li><a href="../navbar/ninjago.html">Ninjago</a></li>
+                <li><a href="../navbar/harry_potter.html">Harry Potter</a></li>
+                <li><a href="../navbar/veiculos.html">Veículos</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div id="produtos">
+            <div id="titulo">
+                <div id="t-produto"><p>Produto</p></div>
+                <div class="separacao"></div>
+                <div id="t-preço-unt"><p>Preço unt.</p></div>
+                <div class="separacao"></div>
+                <div id="t-quantidade"><p>Quantidade</p></div>
+                <div class="separacao"></div>
+                <div id="t-preco-total"><p>Preço total</p></div>
+            </div>
+
+            <div class="item">
+                <div class="produto">
+                    <img src="../../imagens/LEGO_Star_Wars_R2-D2.png" alt="Lego Star Wars R2-D2">
+                    <p class="nome-produto">Lego Star Wars R2-D2</p>
+                </div>
+                <div class="separacao"></div>
+                <div class="preço-unt">
+                    <p>R$219,50</p>
+                </div>
+                <div class="separacao"></div>
+                <div class="quantidade1">
+                    <button class="subitrair1">
+                        <svg class="plus-sign" viewBox="0 0 24 24">
+                            <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </button>
+                    <p class="num-quantidade1">1</p>
+                    <button class="adicionar1"> 
+                        <svg class="plus-sign" viewBox="0 0 24 24">
+                            <line x1="12" y1="5" x2="12" y2="19" stroke="black" stroke-width="2"/>
+                            <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="separacao"></div>
+                <div class="preco-total">
+                    <p>R$219,50</p>
+                </div>
+            </div>
+            <div class="separacao-horizontal"></div>
+            <div class="item">
+                <div class="produto">
+                    <img src="../../imagens/Chapeu_Seletor.png" alt="Chapeu Seletor">
+                    <p class="nome-produto">Chapeu Seletor</p>
+                </div>
+                <div class="separacao"></div>
+                <div class="preço-unt">
+                    <p>R$86,30</p>
+                </div>
+                <div class="separacao"></div>
+                <div class="quantidade2">
+                    <button class="subitrair2">
+                        <svg class="plus-sign" viewBox="0 0 24 24">
+                            <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </button>
+                    <p class="num-quantidade2">1</p>
+                    <button class="adicionar2"> 
+                        <svg class="plus-sign" viewBox="0 0 24 24">
+                            <line x1="12" y1="5" x2="12" y2="19" stroke="black" stroke-width="2"/>
+                            <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="separacao"></div>
+                <div class="preco-total">
+                    <p>R$86,30</p>
+                </div>
+            </div>
+            <div class="separacao-horizontal"></div>
+            <div class="item">
+                <div class="produto">
+                    <img src="../../imagens/Ferrari_488.png" alt="Ferrari 488">
+                    <p class="nome-produto">Ferrari 488</p>
+                </div>
+                <div class="separacao"></div>
+                <div class="preço-unt">
+                    <p>R$1599,99</p>
+                </div>
+                <div class="separacao"></div>
+                <div class="quantidade3">
+                    <button class="subitrair3">
+                        <svg class="plus-sign" viewBox="0 0 24 24">
+                            <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </button>
+                    <p class="num-quantidade3">1</p>
+                    <button class="adicionar3"> 
+                        <svg class="plus-sign" viewBox="0 0 24 24">
+                            <line x1="12" y1="5" x2="12" y2="19" stroke="black" stroke-width="2"/>
+                            <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="separacao"></div>
+                <div class="preco-total">
+                    <p>R$1599,99</p>
+                </div>
+            </div>
+        </div>
+        <div id="pagamento">
+            <div id="inserir-informacoes">
+                <div class="informacao">
+                    <label for="cep">Cep:</label>
+                    <input type="text" name="cep" id="cep">
+                </div>
+                <div class="informacao">
+                    <label for="codigo-promocional">Código Promocional:</label>
+                    <input type="text" name="codigo-promocional" id="codigo-promocional">
+                </div>
+            </div>
+            <div id="total-compra">
+                <div id="valores">
+                    <p>Frete: R$30,00</p>
+                    <p>Preço produtos: R$1905,79</p>
+                    <p>Taxas: R$200,00</p>
+                    <p>Desconto: -R$0</p>
+                </div>
+                <div id="valor-compra">
+                    <p>Valor Total da Compra</p>
+                    <p>R$2135,79</p>
+                    <button>Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const numQuantidadeElement = document.querySelector('.num-quantidade1');
+
+            const Adicionar = () => {
+                if (numQuantidadeElement.innerText !== '100'){
+                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) + 1;
+                }
+            };
+
+            const Subitrair = () => {
+                if (numQuantidadeElement.innerText !== "1"){
+                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) - 1;
+                }
+            }
+
+            document.querySelector('.adicionar1').addEventListener('click', Adicionar);
+            document.querySelector('.subitrair1').addEventListener('click', Subitrair)
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const numQuantidadeElement = document.querySelector('.num-quantidade2');
+
+            const Adicionar = () => {
+                if (numQuantidadeElement.innerText !== '100'){
+                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) + 1;
+                }
+            };
+
+            const Subitrair = () => {
+                if (numQuantidadeElement.innerText !== "1"){
+                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) - 1;
+                }
+            }
+
+            document.querySelector('.adicionar2').addEventListener('click', Adicionar);
+            document.querySelector('.subitrair2').addEventListener('click', Subitrair)
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const numQuantidadeElement = document.querySelector('.num-quantidade3');
+
+            const Adicionar = () => {
+                if (numQuantidadeElement.innerText !== '100'){
+                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) + 1;
+                }
+            };
+
+            const Subitrair = () => {
+                if (numQuantidadeElement.innerText !== "1"){
+                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) - 1;
+                }
+            }
+
+            document.querySelector('.adicionar3').addEventListener('click', Adicionar);
+            document.querySelector('.subitrair3').addEventListener('click', Subitrair)
+        });
+    </script>
+</body>
+</html>

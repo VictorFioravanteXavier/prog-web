@@ -9,10 +9,10 @@ img{
 }
 
 body {
-    background: linear-gradient(180deg, rgba(0,35,102,1) 8%, rgb(232, 0, 0) 35%);
-    background-color: rgb(232, 0, 0); /* Cor fixa após o gradiente */
+    background: linear-gradient(180deg, rgba(0,35,102,1) 10%, #000000 35%);
+    background-color: rgb(0, 0, 0); /* Cor fixa após o gradiente */
     height: 100vh;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     width: 100%;
 }
 
@@ -87,6 +87,8 @@ header li{
 
 #coracao, #carrinho, #usuario{
     height: 50px;
+    width: 50px;
+    display: block;
 }
 
 #entrar{
@@ -262,7 +264,6 @@ main{
 .informacoes .entrega .prazo-entrega{
     display: flex;
     align-items: center;
-    justify-content: f;
 }
 
 .informacoes .entrega .prazo-entrega img{
@@ -464,6 +465,12 @@ main{
     width: 95%; 
     min-width: 342px;
     height: auto;
+}
+
+.comentarios .coment .data {
+    margin-left: 88%;
+    margin-top: 10px;
+    font-size: 12.5px;
 }
 
 .separacao-horizontal{

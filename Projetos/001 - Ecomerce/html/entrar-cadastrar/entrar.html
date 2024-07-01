@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrar</title>
-    <link rel="stylesheet" href="../../estilos/entrar e cadastrar/style.css">
+    <link rel="stylesheet" href="../../estilos/entrar_cadastrar/style.css">
 </head>
 <body>
-    <div>
-        <p><a href="../index.html" class="voltar"></a></p>
-    </div>
     <div class="container">
         <div class="titulo">
-            <img src="../../imagens/usuario_icon_black.png" alt="imagem de um icone de usuário">
+            <img src="../../imagens/usuario_icon.png" alt="imagem de um icone de usuário" class="icon">
             <input type="checkbox" class="toggle" id="login-signup">  
             <label for="login-signup" class="custom-label"></label>
         </div>
@@ -74,6 +71,19 @@
             const isChecked = this.checked;
             document.querySelector('.front').style.display = isChecked ? 'none' : 'block';
             document.querySelector('.back').style.display = isChecked ? 'block' : 'none';
+        }); 
+
+        const logar = document.getElementsByClassName("logar")[0];
+        const cadastrar = document.getElementsByClassName("cadastrar")[0];
+        
+        logar.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            window.location.href = '../index.html'; 
+        });
+
+        cadastrar.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            window.location.href = '../index.html'; 
         });
     </script>
 </body>
