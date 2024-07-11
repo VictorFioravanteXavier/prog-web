@@ -103,6 +103,7 @@ form .inp input {
     border: 0;
     outline: none;
     font-size: 20px;
+    color: #000000;
 }
 
 label img {
@@ -116,6 +117,7 @@ div .esp {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    color: white;
 }
 
 form .lembrar-me {
@@ -134,7 +136,6 @@ form .lembrar-me {
     position: relative;
     cursor: pointer;
     appearance: none;  /* Remove a aparência padrão */
-    -webkit-appearance: none;
 }
 
 .lembrar-me input[type=checkbox]:before {
