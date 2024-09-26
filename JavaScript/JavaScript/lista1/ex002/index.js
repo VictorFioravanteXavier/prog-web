@@ -1,1 +1,0 @@
-let num = prompt('Digite um número');
