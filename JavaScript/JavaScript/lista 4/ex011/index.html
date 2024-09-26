@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function dataPorExtenso(data) {
+      const meses = [
+        "janeiro", "fevereiro", "março", "abril", "maio", "junho",
+        "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+      ];
+
+      const numerosPorExtenso = [
+        "zero", "um", "dois", "três", "quatro", "cinco", "seis", 
+        "sete", "oito", "nove", "dez", "onze", "doze", "treze", 
+        "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", 
+        "dezenove", "vinte", "vinte e um", "vinte e dois", "vinte e três", 
+        "vinte e quatro", "vinte e cinco", "vinte e seis", 
+        "vinte e sete", "vinte e oito", "vinte e nove", "trinta", 
+        "trinta e um"
+      ];
+
+      const [dia, mes, ano] = data.split('/').map(Number);
+
+      const anoPorExtenso = ano >= 2000 && ano <= 2100
+        ? 'dois mil' + (ano > 2000 ? ' e ' + numerosPorExtenso[ano - 2000] : '')
+        : '';
+
+      return `${numerosPorExtenso[dia]} de ${meses[mes - 1]} de ${anoPorExtenso}`;
+    }
+
+    document.write(dataPorExtenso('12/08/2024')); 
+
+  </script>
+</body>
+</html>

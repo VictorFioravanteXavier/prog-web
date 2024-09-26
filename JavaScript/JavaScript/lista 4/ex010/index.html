@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    const validar_hora = (hora) => {
+      hora_separada = hora.split(':').map(Number);
+      console.log(hora_separada)
+      if (hora_separada[0] < 12){
+        document.write(hora_separada[0],':',hora_separada[1], 'AM')
+      } else {
+        document.write((hora_separada[0]-12),':',hora_separada[1], ' PM')
+      }
+    }
+
+    let sim = true
+    let escolha = ''
+
+    async function main() {
+      let sim = true;
+
+      while (sim) {
+        const hora = prompt('Digite alguma hora exemplo (14:25)');
+        validar_hora(hora);
+
+        const escolha = prompt("Deseja continuar? (s / n)");
+        await sleep(20000);
+
+        if (escolha === 's') {
+          sim = true;
+        } else {
+          sim = false;
+        }
+      }
+    }
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    main();
+
+    
+  </script>
+</body>
+</html>

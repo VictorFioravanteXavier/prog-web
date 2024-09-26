@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Console</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p id="terminal"></p>
+    <script>
+        // fun&#195;&#167;&#195;&#181;es do console.log
+        var log = '';
+        function console.log(texto) {
+            log = log + texto + '<br/>';
+            document.getElementById('terminal').innerHTML = log;
+        }
+        function console.logClear() {
+            log = '';
+            document.getElementById('terminal').innerHTML = log;
+        }
+
+        // como usar
+        console.log('Oiii');
+        console.log('Tchau!');
+
+        // para limpar
+        // console.logClear();
+
+
+        let jogoVelha = {
+  1: {
+    1: '',
+    2: '',
+    3: ''
+  },
+  2: {
+    1: '',
+    2: '',
+    3: ''
+  },
+  3: {
+    1: '',
+    2: '',
+    3: ''
+  }
+}
+
+let acabou = true
+let turno = 0
+
+
+const validador = (jogoVelha) => {
+  if (jogoVelha['1']['1']==='X' && jogoVelha['1']['2']==='X' && jogoVelha['1']['3']==='X') {
+    console.log('Jogador 1 venceu')
+    return false
+  } else if (jogoVelha['2']['1']==='X' && jogoVelha['2']['2']==='X' && jogoVelha['2']['3']==='X') {
+    console.log('Jogador 1 venceu')
+    return false
+  } else if (jogoVelha['3']['1']==='X' && jogoVelha['3']['2']==='X' && jogoVelha['3']['3']==='X') {
+    console.log('Jogador 1 venceu')
+    return false
+  } else if (jogoVelha['1']['1']==='X' && jogoVelha['2']['1']==='X' && jogoVelha['3']['1']==='X') {
+    console.log('Jogador 1 venceu')
+    return false
+  } else if (jogoVelha['1']['2']==='X' && jogoVelha['2']['2']==='X' && jogoVelha['3']['2']==='X') {
+    console.log('Jogador 1 venceu')
+    return false
+  } else if (jogoVelha['1']['3']==='X' && jogoVelha['2']['3']==='X' && jogoVelha['3']['3']==='X') {
+    console.log('Jogador 1 venceu')
+    return false
+  } else if (jogoVelha['1']['1']==='X' && jogoVelha['2']['2']==='X' && jogoVelha['3']['3']==='X') {
+    console.log('Jogador 1 venceu')
+    return false
+  } else if (jogoVelha['1']['3']==='X' && jogoVelha['2']['2']==='X' && jogoVelha['3']['1']==='X') {
+    console.log('Jogador 1 venceu')
+    return false
+  }
+  
+  if (jogoVelha['1']['1']==='O' && jogoVelha['1']['2']==='O' && jogoVelha['1']['3']==='O') {
+    console.log('Jogador 2 venceu')
+    return false
+  } else if (jogoVelha['2']['1']==='O' && jogoVelha['2']['2']==='O' && jogoVelha['2']['3']==='O') {
+    console.log('Jogador 2 venceu')
+    return false
+  } else if (jogoVelha['3']['1']==='O' && jogoVelha['3']['2']==='O' && jogoVelha['3']['3']==='O') {
+    console.log('Jogador 2 venceu')
+    return false
+  } else if (jogoVelha['1']['1']==='O' && jogoVelha['2']['1']==='O' && jogoVelha['3']['1']==='O') {
+    console.log('Jogador 2 venceu')
+    return false
+  } else if (jogoVelha['1']['2']==='O' && jogoVelha['2']['2']==='O' && jogoVelha['3']['2']==='O') {
+    console.log('Jogador 2 venceu')
+    return false
+  } else if (jogoVelha['1']['3']==='O' && jogoVelha['2']['3']==='O' && jogoVelha['3']['3']==='O') {
+    console.log('Jogador 2 venceu')
+    return false
+  } else if (jogoVelha['1']['1']==='O' && jogoVelha['2']['2']==='O' && jogoVelha['3']['3']==='O') {
+    console.log('Jogador 2 venceu')
+    return false
+  } else if (jogoVelha['1']['3']==='O' && jogoVelha['2']['2']==='O' && jogoVelha['3']['1']==='O') {
+    console.log('Jogador 2 venceu')
+    return false
+  } else {
+    return true
+  }
+}
+
+while (acabou) {
+
+  console.log('  Jogo Da Velha')
+  console.log('---------------')
+  console.log('  0 1 2 3')
+  console.log(`  1 ${jogoVelha['1']['1']}|${jogoVelha['1']['2']}|${jogoVelha['1']['3']}`)
+  console.log('---------------')
+  console.log(`  2 ${jogoVelha['2']['1']}|${jogoVelha['2']['2']}|${jogoVelha['2']['3']}`)
+  console.log('---------------')
+  console.log(`  3 ${jogoVelha['3']['1']}|${jogoVelha['3']['2']}|${jogoVelha['3']['3']}`)
+
+  if (turno === 0){
+    console.log('Turno do jogador X')
+    let escolhaX = parseInt(prompt('Escolha um número de 1 a 3 no referete a X jogo da velha'));
+    let escolhaY = parseInt(prompt('Escolha um número de 1 a 3 no referete a Y jogo da velha'));
+    while (escolhaX > 3 || escolhaX < 1){
+      let escolhaX = parseInt(prompt('Valore errado colocque um valor valido de 1 a 3'));
+    }
+    while (escolhaY > 3 || escolhaY < 1){
+      let escolhaY = parseInt(prompt('Valore errado colocque um valor valido de 1 a 3'));
+    }
+    turno++
+    jogoVelha[escolhaY][escolhaX] = 'X'
+  } else if (turno === 1) {
+      console.log('Turno do jogador O');
+      
+      let escolhaX = Math.floor(Math.random() * 3) + 1; 
+      let escolhaY = Math.floor(Math.random() * 3) + 1; 
+
+      turno--;
+      jogoVelha[escolhaY][escolhaX] = 'O';
+  }
+  acabou = validador(jogoVelha)
+}
+
+    </script>
+</body>
+</html>
