@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Console</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p id="terminal"></p>
+    <script>
+        // fun&#195;&#167;&#195;&#181;es do fakeConsole
+        var log = '';
+        function fakeConsole(texto) {
+            log = log + texto + '<br/>';
+            document.getElementById('terminal').innerHTML = log;
+        }
+        function fakeConsoleClear() {
+            log = '';
+            document.getElementById('terminal').innerHTML = log;
+        }
+
+        // como usar
+        fakeConsole('Oiii');
+        fakeConsole('Tchau!');
+
+        // para limpar
+        // fakeConsoleClear();
+
+      
+    </script>
+</body>
+</html>

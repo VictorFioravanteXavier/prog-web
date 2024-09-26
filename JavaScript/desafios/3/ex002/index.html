@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
+  <p id="terminal"></p>
   <script>
+    
 
 
       let jogoVelha = {
@@ -33,8 +36,6 @@ let turno = 0
 const reescrever = (x, y) => {
   return jogoVelha[y][x] !== ''; 
 }
-
-
 
 const validador = (jogoVelha) => {
 if (jogoVelha['1']['1']==='X' && jogoVelha['1']['2']==='X' && jogoVelha['1']['3']==='X') {
@@ -115,28 +116,23 @@ if (turno === 0){
   while (escolhaX > 3 || escolhaX < 1){
     let escolhaX = parseInt(prompt('Valore errado colocque um valor valido de 1 a 3'));
   }
-  while (escolhaY > 3 || escolhaY < 1 ){
+  while (escolhaY > 3 || escolhaY < 1){
     let escolhaY = parseInt(prompt('Valore errado colocque um valor valido de 1 a 3'));
   }
   turno++
   jogoVelha[escolhaY][escolhaX] = 'X'
 } else if (turno === 1) {
-  console.log('Turno do jogador O')
-  let escolhaX = parseInt(prompt('Escolha um número de 1 a 3 no referete a X jogo da velha'));
-  let escolhaY = parseInt(prompt('Escolha um número de 1 a 3 no referete a Y jogo da velha'));
-  while (reescrever(escolhaX, escolhaY)){
-    alert("(já foi escolhido essa casa)")
-    let escolhaX = parseInt(prompt('Escolha um número de 1 a 3 no referete a X jogo da velha'));
-    let escolhaY = parseInt(prompt('Escolha um número de 1 a 3 no referete a Y jogo da velha'));
-  }
-  while (escolhaX > 3 || escolhaX < 1){
-    let escolhaX = parseInt(prompt('Valore errado colocque um valor valido de 1 a 3'));
-  }
-  while (escolhaY > 3 || escolhaY < 1){
-    let escolhaY = parseInt(prompt('Valore errado colocque um valor valido de 1 a 3'));
-  }
-  turno--
-  jogoVelha[escolhaY][escolhaX] = 'O'
+    console.log('Turno do jogador O');
+    
+    let escolhaX = Math.floor(Math.random() * 3) + 1; 
+    let escolhaY = Math.floor(Math.random() * 3) + 1; 
+
+    while (reescrever(escolhaX, escolhaY)){
+      let escolhaX = Math.floor(Math.random() * 3) + 1; 
+      let escolhaY = Math.floor(Math.random() * 3) + 1; 
+    }
+    turno--;
+    jogoVelha[escolhaY][escolhaX] = 'O';
 }
 acabou = validador(jogoVelha)
 }
