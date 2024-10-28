@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho</title>
-    <link rel="stylesheet" href="../../estilos/carrinho/style.css">
+    <link rel="stylesheet" href="../../estilos/style.css">
     <link rel="shortcut icon" href="../../imagens/Logo_ico.ico" type="image/x-icon">
 </head>
 <body>
@@ -43,7 +43,7 @@
             </ul>
         </div>
     </nav>
-    <main>
+    <main class="main-carrinho">
         <div id="produtos">
             <div id="titulo">
                 <div id="t-produto"><p>Produto</p></div>
@@ -54,9 +54,9 @@
                 <div class="separacao"></div>
                 <div id="t-preco-total"><p>Preço total</p></div>
             </div>
-
+    
             <div class="item">
-                <div class="produto">
+                <div class="produto" data-id="1" data-nome="Lego Star Wars R2-D2" data-preco="219.50">
                     <img src="../../imagens/LEGO_Star_Wars_R2-D2.png" alt="Lego Star Wars R2-D2">
                     <p class="nome-produto">Lego Star Wars R2-D2</p>
                 </div>
@@ -65,14 +65,14 @@
                     <p>R$219,50</p>
                 </div>
                 <div class="separacao"></div>
-                <div class="quantidade1">
-                    <button class="subitrair1">
+                <div class="quantidade-carrinho">
+                    <button class="subitrair">
                         <svg class="plus-sign" viewBox="0 0 24 24">
                             <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
                         </svg>
                     </button>
-                    <p class="num-quantidade1">1</p>
-                    <button class="adicionar1"> 
+                    <input type="number" class="num-quantidade" value="1">
+                    <button class="adicionar"> 
                         <svg class="plus-sign" viewBox="0 0 24 24">
                             <line x1="12" y1="5" x2="12" y2="19" stroke="black" stroke-width="2"/>
                             <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
@@ -84,9 +84,11 @@
                     <p>R$219,50</p>
                 </div>
             </div>
+    
             <div class="separacao-horizontal"></div>
+    
             <div class="item">
-                <div class="produto">
+                <div class="produto" data-id="2" data-nome="Chapeu Seletor" data-preco="86.30">
                     <img src="../../imagens/Chapeu_Seletor.png" alt="Chapeu Seletor">
                     <p class="nome-produto">Chapeu Seletor</p>
                 </div>
@@ -95,14 +97,14 @@
                     <p>R$86,30</p>
                 </div>
                 <div class="separacao"></div>
-                <div class="quantidade2">
-                    <button class="subitrair2">
+                <div class="quantidade-carrinho">
+                    <button class="subitrair">
                         <svg class="plus-sign" viewBox="0 0 24 24">
                             <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
                         </svg>
                     </button>
-                    <p class="num-quantidade2">1</p>
-                    <button class="adicionar2"> 
+                    <input type="number" class="num-quantidade" value="1">
+                    <button class="adicionar"> 
                         <svg class="plus-sign" viewBox="0 0 24 24">
                             <line x1="12" y1="5" x2="12" y2="19" stroke="black" stroke-width="2"/>
                             <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
@@ -114,9 +116,11 @@
                     <p>R$86,30</p>
                 </div>
             </div>
+    
             <div class="separacao-horizontal"></div>
+    
             <div class="item">
-                <div class="produto">
+                <div class="produto" data-id="3" data-nome="Ferrari 488" data-preco="1599.99">
                     <img src="../../imagens/Ferrari_488.png" alt="Ferrari 488">
                     <p class="nome-produto">Ferrari 488</p>
                 </div>
@@ -125,14 +129,14 @@
                     <p>R$1599,99</p>
                 </div>
                 <div class="separacao"></div>
-                <div class="quantidade3">
-                    <button class="subitrair3">
+                <div class="quantidade-carrinho">
+                    <button class="subitrair">
                         <svg class="plus-sign" viewBox="0 0 24 24">
                             <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
                         </svg>
                     </button>
-                    <p class="num-quantidade3">1</p>
-                    <button class="adicionar3"> 
+                    <input type="number" class="num-quantidade" value="1">
+                    <button class="adicionar"> 
                         <svg class="plus-sign" viewBox="0 0 24 24">
                             <line x1="12" y1="5" x2="12" y2="19" stroke="black" stroke-width="2"/>
                             <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
@@ -145,89 +149,36 @@
                 </div>
             </div>
         </div>
+    
         <div id="pagamento">
             <div id="inserir-informacoes">
                 <div class="informacao">
                     <label for="cep">Cep:</label>
                     <input type="text" name="cep" id="cep">
+                    <button onclick="calcularFrete()" class="btn-aplicar">Aplicar</button>
                 </div>
                 <div class="informacao">
                     <label for="codigo-promocional">Código Promocional:</label>
                     <input type="text" name="codigo-promocional" id="codigo-promocional">
+                    <button onclick="aplicarCupon()" class="btn-aplicar">Aplicar</button>
                 </div>
             </div>
+    
             <div id="total-compra">
                 <div id="valores">
-                    <p>Frete: R$30,00</p>
-                    <p>Preço produtos: R$1905,79</p>
-                    <p>Taxas: R$200,00</p>
-                    <p>Desconto: -R$0</p>
+                    <p>Frete: <span id="valorFrete">Coloque um cep</span></p>
+                    <p>Preço produtos: <span id="precoProdutos">R$1905,79</span></p>
+                    <p>Taxas: <span id="taxa"> R$200,00</span></p>
+                    <p>Desconto: <span id="cupomAplicado">-R$ 0,00</span></p>
                 </div>
                 <div id="valor-compra">
                     <p>Valor Total da Compra</p>
-                    <p>R$2135,79</p>
+                    <p><span id="totalCarrinho">2135,79</span></p>
                     <button>Finalizar Compra</button>
                 </div>
             </div>
         </div>
     </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const numQuantidadeElement = document.querySelector('.num-quantidade1');
-
-            const Adicionar = () => {
-                if (numQuantidadeElement.innerText !== '100'){
-                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) + 1;
-                }
-            };
-
-            const Subitrair = () => {
-                if (numQuantidadeElement.innerText !== "1"){
-                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) - 1;
-                }
-            }
-
-            document.querySelector('.adicionar1').addEventListener('click', Adicionar);
-            document.querySelector('.subitrair1').addEventListener('click', Subitrair)
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const numQuantidadeElement = document.querySelector('.num-quantidade2');
-
-            const Adicionar = () => {
-                if (numQuantidadeElement.innerText !== '100'){
-                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) + 1;
-                }
-            };
-
-            const Subitrair = () => {
-                if (numQuantidadeElement.innerText !== "1"){
-                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) - 1;
-                }
-            }
-
-            document.querySelector('.adicionar2').addEventListener('click', Adicionar);
-            document.querySelector('.subitrair2').addEventListener('click', Subitrair)
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const numQuantidadeElement = document.querySelector('.num-quantidade3');
-
-            const Adicionar = () => {
-                if (numQuantidadeElement.innerText !== '100'){
-                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) + 1;
-                }
-            };
-
-            const Subitrair = () => {
-                if (numQuantidadeElement.innerText !== "1"){
-                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) - 1;
-                }
-            }
-
-            document.querySelector('.adicionar3').addEventListener('click', Adicionar);
-            document.querySelector('.subitrair3').addEventListener('click', Subitrair)
-        });
-    </script>
+    <script src="../../js/carrinho.js"></script>
 </body>
 </html>

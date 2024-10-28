@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras com Frete e Cupom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .lista-produtos {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .produto {
+            background-color: #fff;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 30%;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .produto:hover {
+            transform: scale(1.05);
+        }
+
+        .produto img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .produto h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .produto p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .produto button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .produto button:hover {
+            background-color: #45a049;
+        }
+
+        /* Seção Carrinho */
+        .carrinho {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .carrinho h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .item-carrinho {
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            width:70%;
+
+            border-bottom: 1px solid #ddd;
+        }
+
+        .item-carrinho div{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item-carrinho:last-child {
+            border-bottom: none;
+        }
+
+        .item-carrinho p {
+            margin: 0;
+            flex: 1;
+            text-align: left;
+        }
+
+        .item-carrinho input {
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .item-carrinho button {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .resumo-carrinho {
+            text-align: right;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .resumo-carrinho span {
+            font-weight: bold;
+        }
+
+        .carrinho-vazio {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #888;
+        }
+
+        .limpar-carrinho, .calcular-frete {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #FF6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .limpar-carrinho:hover, .calcular-frete:hover {
+            background-color: #e55347;
+        }
+
+        .cupom-container, .frete-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .cupom-container input, .frete-container input {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        .cupom-container button, .frete-container button {
+            margin-top: 10px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cupom-container button:hover, .frete-container button:hover {
+            background-color: #45a049;
+        }
+
+        .cupom-aplicado {
+            color: green;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <body>
+
+        <div class="container">
+            <h1>Loja de Produtos</h1>
+    
+            <div class="lista-produtos">
+                <div class="produto" data-id="1" data-nome="Notebook Dell Inspiron" data-preco="3799.90">
+                    <img src="https://via.placeholder.com/100" alt="Notebook Dell Inspiron">
+                    <h3>Notebook Dell Inspiron</h3>
+                    <p>Preço: R$ 3.799,90</p>
+                    <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto" data-id="2" data-nome="Smartphone Samsung Galaxy S21" data-preco="2499.90">
+                    <img src="https://via.placeholder.com/100" alt="Smartphone Samsung Galaxy S21">
+                    <h3>Smartphone Samsung Galaxy S21</h3>
+                    <p>Preço: R$ 2.499,90</p>
+                    <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto" data-id="3" data-nome="Fone de Ouvido Bluetooth JBL" data-preco="599.90">
+                    <img src="https://via.placeholder.com/100" alt="Fone de Ouvido Bluetooth JBL">
+                    <h3>Fone de Ouvido Bluetooth JBL</h3>
+                    <p>Preço: R$ 599,90</p>
+                    <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+    
+            <div class="carrinho">
+                <h2>Carrinho de Compras</h2>
+                <div id="itensCarrinho" class="itens-carrinho"></div>
+                <div class="frete-container">
+                    <input type="text" id="cep" placeholder="Digite o CEP para calcular o frete">
+                    <button id="calcularFrete" class="calcular-frete" onclick="calcularFrete()">Calcular Frete</button>
+                </div>
+                <div class="cupom-container">
+                    <input type="text" id="cupom" placeholder="Digite seu cupom de desconto">
+                    <button id="aplicarCupom" class="calcular-frete" onclick="aplicarCupon()">Aplicar Cupom</button>
+                    <p id="cupomAplicado" class="cupom-aplicado" style="display: none;">Cupom aplicado: DESCONTO10</p>
+                </div>
+                <p class="resumo-carrinho">Frete: R$ <span id="valorFrete">0,00</span></p>
+                <p class="resumo-carrinho">Total: R$ <span id="totalCarrinho">0,00</span></p>
+                <button id="limparCarrinho" class="limpar-carrinho" onclick="limparCarrinho()">Limpar Carrinho</button>
+            </div>
+    
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>

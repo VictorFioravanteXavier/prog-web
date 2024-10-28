@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limitador de Datas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .date-picker-container {
+    background-color: #d3d3d3;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    width: 200px;
+    margin: 50px auto;
+}
+
+.date-picker-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+}
+
+.date-picker-modal input {
+    margin: 10px 0;
+}
+
+.date-picker-modal button {
+    margin-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="date-picker-container" onclick="showDatePicker()">
+        <span id="date-range">data-inicial - data-final</span>
+    </div>
+    <div class="date-picker-modal" id="date-picker-modal">
+        <input type="date" id="start-date">
+        <input type="date" id="end-date">
+        <button onclick="setDateRange()">OK</button>
+    </div>
+
+    <script>
+        function showDatePicker() {
+    document.getElementById('date-picker-modal').style.display = 'block';
+}
+
+function setDateRange() {
+    var startDate = document.getElementById('start-date').value;
+    var endDate = document.getElementById('end-date').value;
+    
+    if (startDate && endDate) {
+        document.getElementById('date-range').textContent = startDate + ' - ' + endDate;
+    }
+    
+    document.getElementById('date-picker-modal').style.display = 'none';
+}
+
+    </script>
+</body>
+</html>

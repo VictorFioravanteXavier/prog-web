@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Wars R2-D2</title>
-    <link rel="stylesheet" href="../../estilos/compra/style.css">
+    <link rel="stylesheet" href="../../estilos/style.css">
     <link rel="shortcut icon" href="../../imagens/Logo_ico.ico" type="image/x-icon">
 </head>
 <body>
@@ -43,8 +43,8 @@
             </ul>
         </div>
     </nav>
-    <main>
-        <div class="container">
+    <main class="compra-main">
+        <div class="container-produto">
             <div class="imagem">
                 <img src="../../imagens/LEGO_Star_Wars_R2-D2.png" alt="imagem do produto">
             </div>
@@ -61,7 +61,7 @@
             <div class="separacao"></div>
             <div class="informacoes">
                 <div class="preco">
-                    <h2><span class="cor-preco">R$219,50</span> à vista</h2>
+                    <h2><span class="cor-preco" id="preco-unitario">R$219,50</span> à vista</h2>
                     <h3>12x de <span class="cor-preco">R$19,00</span> no cartão com juros</h3>
                 </div>
                 <div class="entrega">
@@ -73,22 +73,23 @@
                     <img src="../../imagens/formas-pagamento-img.png" alt="">
                 </div>
                 <div class="quantidade">
-                    <button class="subitrair">
+                    <button class="subitrair" id="btn-subtrair">
                         <svg class="plus-sign" viewBox="0 0 24 24">
                             <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
                         </svg>
                     </button>
-                    <div class="num-quantidade">0</div>
-                    <button class="adicionar"> 
+                    <div class="num-quantidade" id="quantidade">1</div>
+                    <button class="adicionar" id="btn-adicionar"> 
                         <svg class="plus-sign" viewBox="0 0 24 24">
                             <line x1="12" y1="5" x2="12" y2="19" stroke="black" stroke-width="2"/>
                             <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
                         </svg>
                     </button>
                 </div>
+                <h2>Total: <span class="cor-preco" id="total">R$0,00</span></h2>
                 <button class="btn">Adicionar no Carrinho</button>
                 <button class="btn">Comprar Agora</button>
-            </div>
+            </div>            
         </div>
             <div class="comentarios">
                 <div class="comentarios-main">
@@ -179,25 +180,6 @@
                 </div>
             </div>
     </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const numQuantidadeElement = document.querySelector('.num-quantidade');
-
-            const Adicionar = () => {
-                if (numQuantidadeElement.innerText !== '100'){
-                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) + 1;
-                }
-            };
-
-            const Subitrair = () => {
-                if (numQuantidadeElement.innerText !== "0"){
-                    numQuantidadeElement.innerText = parseInt(numQuantidadeElement.innerText) - 1;
-                }
-            }
-
-            document.querySelector('.adicionar').addEventListener('click', Adicionar);
-            document.querySelector('.subitrair').addEventListener('click', Subitrair)
-        });
-    </script>  
+    <script src="../../js/produto.js"></script>
 </body>
 </html>
