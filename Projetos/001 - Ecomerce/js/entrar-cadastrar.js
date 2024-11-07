@@ -24,10 +24,8 @@ function validarLogin() {
     const alertaModal = document.getElementById("alerta-modal");
     const listaErros = document.getElementById("lista-erros");
     
-    // Limpa a lista de erros no início
     if (listaErros) listaErros.innerHTML = "";
 
-    // Verifica campos vazios
     if (!username || !senha) {
         const itemErro = document.createElement("li");
         itemErro.textContent = "É necessário digitar usuário e senha para prosseguir.";
@@ -49,10 +47,8 @@ function validarCadastro() {
     const alertaModal = document.getElementById("alerta-modal");
     const listaErros = document.getElementById("lista-erros");
 
-    // Limpa a lista de erros no início
     if (listaErros) listaErros.innerHTML = "";
 
-    // Adiciona mensagens de erro para cada campo vazio
     if (!username) {
         const itemErro = document.createElement("li");
         itemErro.textContent = "Nome de usuário não preenchido.";
@@ -83,7 +79,6 @@ function validarCadastro() {
         listaErros.appendChild(itemErro);
     }
 
-    // Exibe o modal se houver erros
     if (listaErros.childElementCount > 0) {
         alertaModal.style.display = "flex";
     } else {
@@ -91,11 +86,10 @@ function validarCadastro() {
     }
 }
 
-// Função para fechar o modal
 function fecharModal() {
     const alertaModal = document.getElementById("alerta-modal");
     const listaErros = document.getElementById("lista-erros");
 
     if (alertaModal) alertaModal.style.display = "none";
-    if (listaErros) listaErros.innerHTML = ""; // Limpa a lista de erros ao fechar o modal
+    if (listaErros) listaErros.innerHTML = "";
 }
