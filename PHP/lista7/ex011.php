@@ -1,6 +1,5 @@
 <?php
-    echo "Informe o horário (0 a 23): ";
-    $horario = intval(trim(fgets(STDIN)));
+    $horario = 12;
 
     switch (true) {
         case ($horario >= 5 && $horario <= 11):
