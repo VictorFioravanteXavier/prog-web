@@ -8,12 +8,10 @@ const logar = document.getElementsByClassName("logar")[0];
 const cadastrar = document.getElementsByClassName("cadastrar")[0];
 
 logar.addEventListener('click', function(event) {
-    event.preventDefault(); 
     validarLogin()
 });
 
 cadastrar.addEventListener('click', function(event) {
-    event.preventDefault(); 
     validarCadastro()
 });
 
@@ -33,7 +31,6 @@ function validarLogin() {
         alertaModal.style.display = "flex";
     } else {
         alertaModal.style.display = "none";
-        alert("Login bem-sucedido!");
     }
 }
 
@@ -81,9 +78,7 @@ function validarCadastro() {
 
     if (listaErros.childElementCount > 0) {
         alertaModal.style.display = "flex";
-    } else {
-        alert("Cadastro bem-sucedido!");
-    }
+    } 
 }
 
 function fecharModal() {

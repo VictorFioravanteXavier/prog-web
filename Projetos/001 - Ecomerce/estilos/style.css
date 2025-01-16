@@ -1039,10 +1039,11 @@ form .lembrar-me {
     font-weight: bold;
 }
 
-.main-carrinho #total-compra #valor-compra button{
+.main-carrinho #total-compra #valor-compra form button{
     width: 100%;
     height: 40px;
     background-color: #5A47CE;
+    padding: 5px 20px;
     color: #fff;
     border: 0;
     border-radius: 30px;

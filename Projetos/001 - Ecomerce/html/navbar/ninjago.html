@@ -1,76 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Universo Lego | Ninjago</title>
-    <link rel="stylesheet" href="../../estilos/style.css">
-    <link rel="shortcut icon" href="../../imagens/Logo_ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../estilos/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../../imagens/Logo_ico.ico"
+      type="image/x-icon"
+    />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
     <style>
-        main{
-            height: auto;
-        }
+      main {
+        height: auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div>
-            <a href="../index.html"><img src="../../imagens/Logo.png" alt="Logo do ecomerce" id="logo"></a>
-        </div>
-        <div class="search-bar">
-            <form action="#">
-                <label for="search" id="lupa"><img src="../../imagens/lupa_icon.png" id="lupa_icon" alt=""></label>
-                <input type="text" name="search" id="search" placeholder="Faça uma pesquisa">
-            </form>
-        </div>
-        <div id="icones">
-            <ul>
-                <li><a href="#"><img src="../../imagens/coracao_icon.png" id="coracao" alt=""></a></li>
-                <li><a href="#"><img src="../../imagens/carrinho_icon.png" id="carrinho" alt=""></a></li>
-                <li><a href="#"><img src="../../imagens/usuario_icon.png" id="usuario" alt=""></a></li>
-            </ul>
-        </div>
-        <div id="entrar">
-            <h2><a href="../entrar-cadastrar/entrar.html">Entrar</a></h2>
-        </div>
-    </header>  
-    <hr>
+      <div>
+        <a href="../index.html"
+          ><img src="../../imagens/Logo.png" alt="Logo do ecomerce" id="logo"
+        /></a>
+      </div>
+      <div class="search-bar">
+        <form action="#">
+          <label for="search" id="lupa"
+            ><img src="../../imagens/lupa_icon.png" id="lupa_icon" alt=""
+          /></label>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Faça uma pesquisa"
+          />
+        </form>
+      </div>
+      <div id="icones">
+        <ul>
+          <li>
+            <a href="#"
+              ><img src="../../imagens/coracao_icon.png" id="coracao" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="../carrinho/carrinho.php"
+              ><img src="../../imagens/carrinho_icon.png" id="carrinho" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../../imagens/usuario_icon.png" id="usuario" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div id="entrar">
+        <h2><a href="entrar-cadastrar/entrar.php">Entrar</a></h2>
+      </div>
+    </header>
+    <hr />
     <nav>
-        <div class="classificacao">
-            <ul>            
-                <li><a href="../index.html">Todos</a></li>
-                <li><a href="star_wars.html">Star Wars</a></li>
-                <li><a href="super_heroes.html">Super Heroes</a></li>
-                <li><a href="arcade.html">Arcade</a></li>         
-                <li class="selecionado"><a href="ninjago.html">Ninjago</a></li>
-                <li><a href="harry_potter.html">Harry Potter</a></li>
-                <li><a href="veiculos.html">Veículos</a></li>
-            </ul>
-        </div>
+      <div class="classificacao">
+        <ul>
+          <li><a href="../index.html">Todos</a></li>
+          <li><a href="star_wars.html">Star Wars</a></li>
+          <li><a href="super_heroes.html">Super Heroes</a></li>
+          <li><a href="arcade.html">Arcade</a></li>
+          <li class="selecionado"><a href="ninjago.html">Ninjago</a></li>
+          <li><a href="harry_potter.html">Harry Potter</a></li>
+          <li><a href="veiculos.html">Veículos</a></li>
+        </ul>
+      </div>
     </nav>
     <main class="container">
-        <div class="itens_venda">
-            <ul>
-                <li>
-                    <a href="">
-                        <div>
-                            <img src="../../imagens/NInjago-Lobo_Sombra.png" alt="" class="imagem_produto">
-                            <p class="nome_lego">Ninjago - Lobo Sombra</p>
-                            <p class="preco">Preço: R$242,44</p>
-                            <span class="peca_div">
-                                <img src="../../imagens/peca_lego_icon.png" alt="Peças: " class="peca_icon">
-                                <span class="pecas">1.190</span>
-                            </span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
+      <div class="itens_venda">
+        <ul>
+          <li>
+            <a href="">
+              <div>
+                <img
+                  src="../../imagens/NInjago-Lobo_Sombra.png"
+                  alt=""
+                  class="imagem_produto"
+                />
+                <p class="nome_lego">Ninjago - Lobo Sombra</p>
+                <p class="preco">Preço: R$242,44</p>
+                <span class="peca_div">
+                  <img
+                    src="../../imagens/peca_lego_icon.png"
+                    alt="Peças: "
+                    class="peca_icon"
+                  />
+                  <span class="pecas">1.190</span>
+                </span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
     </main>
     <script src="../../js/header.js"></script>
-
-</body>
+  </body>
 </html>
